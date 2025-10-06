@@ -34,10 +34,24 @@ print("Loop finished")
 fruits = ["apple", "banana", "cherry"]
 for fruit in fruits:
     print(fruit)
-    
+print("Loop finished")
+
 # Char loop
 
 text = "Hello, Gian!"
 
 for char in text:
     print(char)
+print("Loop finished")    
+    
+# range() function
+
+for c in range(1, 8, 2):
+    print(c)
+print("Loop finished")
+
+# range function (cont'd)
+
+for v in range(6):
+    print(v)
+print("Loop finished")
