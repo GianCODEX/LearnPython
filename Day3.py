@@ -25,24 +25,25 @@ elif available and on_sale and defective:
 else:
     print("Gadget is DEFECTIVE")
     
-choices = input("\nWill you purchase this device?").strip().lower()
+choices = input("\nWill you purchase this device? (yes/no): ").strip().lower()
 if choices == 'yes':
-    choice = input("Enter confirmation: (yes/no)")
+    choice = input("Enter confirmation: (yes/no): ").strip().lower()
     if choice == 'yes':
         print(f"\nYOU HAVE PURCHASED: {name}\n")
-        
+
         your_Cart = "YOUR CART"
         print("=" * 50)
-        print(your_Cart.upper().center(50))
+        print(your_Cart.center(50))
         print("-" * 50)
 
         print(f"{name:<30} ₱{price:>10.2f}")
 
         print("-" * 50)
 
-        total = (price)
+        total = price
         print(f"{'Total:':<30} ₱{total:>10.2f}")
-        print("=" * 50)       
-    if choice == 'no':
-        print("You have canceled the transcation...")
-    
+        print("=" * 50)
+    else:
+        print("You have canceled the transaction...")
+else:
+    print("No purchase made.")
