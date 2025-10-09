@@ -1,0 +1,48 @@
+name = input("Enter your gadget name: ")
+price = float(input("Enter device price: "))
+
+available_input = input("Is the gadget available? (yes/no): ").strip().lower()
+on_sale_input = input("Is the gadget on sale? (yes/no): ").strip().lower()
+defective_input = input("Is the gadget defective? (yes/no): ").strip().lower()
+
+available = available_input == 'yes'
+on_sale = on_sale_input == 'yes'
+defective = defective_input == 'yes'
+
+print(f"\nGadget: {name}\nPrice: ₱{price:.2f}", type(price))
+
+if available:
+    print("Available: True")
+else:
+    print("Available: False")
+
+if available and on_sale:
+    print("Gadget is ON SALE")
+elif on_sale and defective:
+    print("Gadget is NOT DEFECTIVE")
+elif available and on_sale and defective:
+    print("Gagdet is NOT AVAILABLE")
+else:
+    print("Gadget is DEFECTIVE")
+    
+choices = input("\nWill you purchase this device?").strip().lower()
+if choices == 'yes':
+    choice = input("Enter confirmation: (yes/no)")
+    if choice == 'yes':
+        print(f"\nYOU HAVE PURCHASED: {name}\n")
+        
+        your_Cart = "YOUR CART"
+        print("=" * 50)
+        print(your_Cart.upper().center(50))
+        print("-" * 50)
+
+        print(f"{name:<30} ₱{price:>10.2f}")
+
+        print("-" * 50)
+
+        total = (price)
+        print(f"{'Total:':<30} ₱{total:>10.2f}")
+        print("=" * 50)       
+    if choice == 'no':
+        print("You have canceled the transcation...")
+    
