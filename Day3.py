@@ -36,12 +36,13 @@ if choices == 'yes':
         print(your_Cart.center(50))
         print("-" * 50)
 
-        print(f"{name:<30} ₱{price:>10.2f}")
-
+        print(f"{name.title():<20}{'Qty':>5}{'Unit Price':>25}")
+        print(f"{'':<20}{quantity:>5}{price:>25.2f}")
+        
+        total = price * quantity
+        
         print("-" * 50)
-
-        total = price
-        print(f"{'Total:':<30} ₱{total:>10.2f}")
+        print(f"{'Grand Total:':<40}{total:>10.2f}")
         print("=" * 50)
     else:
         print("You have canceled the transaction...")
